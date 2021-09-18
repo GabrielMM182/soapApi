@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    <ion-title>{{ country }} - {{ isoCode}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <img [src]="info.flag" *ngIf="info.flag">
+      <ion-item>
+        Capital City: {{ info.capital}}
+      </ion-item>
+
+      <ion-item>
+        Currency: {{ info.currency?.sName}} ({{ info.currency?.sISOCode }})
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
